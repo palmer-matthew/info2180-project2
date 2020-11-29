@@ -58,7 +58,7 @@
 
 The wireframes in the project seem relatively similar in terms of the layout. They each contain the header which contains an image and the name of the application. Their main content also each have an aside section for like action selection. The difference is in the content beside the aside section. To note, the login “screen” will not have an aside section, just its content centered.
 
-[Image of Main Layout](./Sketch.png)
+![Image of Main Layout](./Sketch.png)
 
 The main could either have a grid layout with two columns , one for the aside section and one for the screen contents or just have a single column / flex container for its screen contents.
 
