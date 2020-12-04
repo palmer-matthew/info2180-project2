@@ -2,7 +2,6 @@
 
 include '../connect.php';
 
-
 //User Addition Functionality :
 
 if(isset($_SESSION['logged-in'])){
@@ -21,6 +20,7 @@ if(isset($_SESSION['logged-in'])){
                 try{
                     $query = "INSERT INTO Users (firstname, lastname, password, email) VALUES ('{$firstname}','{$lastname}','{$hash}','{$email}')";
                     $conn->exec($query);
+                    echo "SA";
                 }catch(Error $e){
                     echo "User Addition Error: ".$e->msgfmt_format_message;
                 }
@@ -34,3 +34,5 @@ if(isset($_SESSION['logged-in'])){
 }else{
     echo "User Addition Error: You need to be logged in";
 }
+
+$conn = null;

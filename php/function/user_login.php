@@ -16,7 +16,7 @@ if(filter_var($email, FILTER_VALIDATE_EMAIL)){
         try{
             $query = "SELECT * FROM Users WHERE Users.email = '{$email}'";
             $stmt = $conn->query($query);
-            $result = $stmt->fetchALL(PDO::ASSOC);
+            $results = $stmt->fetchALL(PDO::ASSOC);
         }catch(Error $e){
             echo "User Login Error: ".$e->msgfmt_format_message;
         }
@@ -27,6 +27,8 @@ if(filter_var($email, FILTER_VALIDATE_EMAIL)){
                 if(password_verify($password, $results[0]['password'])){
                     $_SESSION['email'] = $email;
                     $_SESSION['logged-in'] = true;
+                    $_SESSION['userid'] = $results[0]['id'];
+                    echo "SL";
                 }else{
                     echo "User Login Error: Password Do Not Match";
                 }
@@ -34,6 +36,7 @@ if(filter_var($email, FILTER_VALIDATE_EMAIL)){
                 if(password_verify($password, $results[0]['password'])){
                     $_SESSION['email'] = $email;
                     $_SESSION['logged-in'] = true;
+                    echo "SL";
                 }else{
                     echo "User Login Error: Password Entered Do Not Match";
                 }
@@ -47,3 +50,5 @@ if(filter_var($email, FILTER_VALIDATE_EMAIL)){
 }else{
     echo "User Login Error: Email is not in the correct format";
 }
+
+$conn = null;

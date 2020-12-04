@@ -26,7 +26,7 @@ CREATE TABLE Issue(
     `assigned_to` INT(11) NOT NULL,
     `created_by` INT(11) NOT NULL,
     `created` DATETIME default CURRENT_TIMESTAMP,
-    `updated` DATETIME,
+    `updated` DATETIME default CURRENT_TIMESTAMP,
     PRIMARY KEY  (`id`)
 );
 
