@@ -4,6 +4,7 @@ session_start();
 if(isset($_POST['action'])){
     switch($_POST['action']){
         case '':
+            echo "Nothing happened";
         break;
 
         case 'logout':
