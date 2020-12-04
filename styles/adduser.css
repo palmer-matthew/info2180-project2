@@ -1,93 +1,108 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+body {
+    margin:0 auto;
     font-size:18px;
-    list-style: none;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-header h2{
-    font-size:20px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-indent: 30px;
-    padding-top: 15px;
-}
-header img{
-    align-items: left;
-}
-header h2{
-    color:#FFFFFF
-
-    }
-header {
-    display: flex;
-    justify-content:inline;
-    background-color: #000000;
-    height: 8vh;
-}
-header img{
-    width:9vh;
-    height:7vh;
-    text-align:left;
-    padding-top: 10px;
-    padding-left:20px;
-    border-radius:70%;
-}
-body{
     background:rgb(255, 255, 255);
 }
-.sidebox{
-    display:flex;
-    position: relative;
+
+.disappear{
+    display: none;
 }
-.sidebox .sidebar{
-    position: fixed;
-    width:180px;
-    height:100%;
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    background-color: #000000;
+    height: 10vh;
+}
+
+header img{
+    width: 7vh;
+    height: auto;
+    margin: 0% 2%;
+}
+
+header h2{
+    font-size: 25px;
+    color:#FFFFFF
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 100vh;
+}
+ 
+.sidebox {
+    display: flex;
     background:rgb(236, 232, 232);
-    padding: 30px 0;
+    padding: 10px 0;
+    height: 100%;
 }
-.sidebox .sidebar ul li{
-    padding:6px;
+
+.sidebox ul {
+    padding-inline-start: 0;
+    width: 100%;
+}
+
+.sidebox ul li{
+    padding-left: 10%;
+    list-style: none;
+    padding: 6px 0px;
     border-bottom:1px solid rbga(0,0,0,0.5);
     border-top:1px solid rbga(225,225,0,0.5);
-    text-indent: 10px;
 }
-.sidebox .sidebar ul li a{
+
+.sidebox ul li:hover{
+    background-color:rgb(182, 180, 180);
+}
+
+.sidebox ul li a{
     color: #000000;
     text-decoration: none;
     font-weight:bold;
     font-size:15px;
 }
-.sidebox .sidebar ul li a .fas{
-    width:35px;
+
+.sidebox ul li a .fas{
+    margin: 0 10%;
 }
 
-.sidebox .sidebar ul li:hover{
-    background:rgb(182, 180, 180);
-}
-.sidebox .sidebar ul li:hover{
+.sidebox ul li > *:hover{
     color: #fff;
 }
+
 .infocon form{
-    padding-top:15px;
-    text-align:left;
-    margin-left:200px;
+    margin-left: 5%;
 }
+
 .infocon h1{
-    text-align:left;
-    text-indent:200px;
-    font-size:30px;
-    margin-top:40px;
+    font-size: 40px;
+    margin-left: 5%;
+    margin-top: 3%;
+    margin-bottom: 10px;
 }
+
 .infocon input{
     background-color:rgb(240, 240, 240);
-    border-radius:3px;
-    border-color:rgb(236, 233, 233);
-    height:29px;
-    width:300px;
-    border-width:0.5px;
+    border-radius: 3px;
+    border:0.5px solid rgb(236, 233, 233);
+    height: 29px;
+    width: 70%;
+    margin-top: 10px;
 }
+
+.infocon select{
+    background-color:rgb(240, 240, 240);
+    border-radius: 3px;
+    border:0.5px solid rgb(236, 233, 233);
+    height: 36px;
+    width: 70.5%;
+    margin-top: 10px;
+}
+
 button{
     background-color:rgb(3, 96, 184);
     border:none;
@@ -96,12 +111,3 @@ button{
     height:29px;
     color: white;
 }
-/*.infocon form label{
-    padding-left: 200px;
-    display:flex;
-    align-items: center;
-    font-size:30px;
-}
-.infocon form input{
-    right:200px;
-}*/
