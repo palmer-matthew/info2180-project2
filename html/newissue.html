@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BugMe Issue Tracker</title>
+        <meta charset= "utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link rel="stylesheet" href="../styles/adduser.css">
+         <link rel="stylesheet" href="../styles/all.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <img class="logo" src="../images/bugicon3.png" alt="bug icon">   
+                <h2>BugMe Issue Tracker</h2>
+            </header>
+        <div class="sidebox">
+            <div class="sidebar">
+                <ul>
+                    <li><a href="home.html"><i class="fas fa-home"></i>Home</a></li>
+                    <li><a href="adduser.html"><i class="fas fa-user-plus"></i>Add User</a></li>
+                    <li><a href="newissue.html"><i class="fas fa-plus-circle"></i>New Issue</a></li>
+                    <li><a href="logout.html"><i class="fas fa-power-off"></i>Logout</a></li>
+                </ul>
+        </div>
+        </div>
+        <div class="infocon">
+            <h1>Create Issue</h1>
+            <form method="post" action="" id="newissue" class="text-field">
+                <label for="title">Title</label><br>
+                <input name="title" type="text" class="txtbox"required><br><br>
+                <label for="description">Description</label><br>
+                <input name="description" type="text" class="txtbox" required><br><br>
+                <label for="assignto">Assigned To</label><br>
+                <input name="assignto" type="text" class="txtbox"required><br><br>
+                <label for="type">Type</label><br>
+                <input name="type" type="text" class="txtbox"required><br><br>
+                <label for="priority">Priority</label><br>
+                <input name="type" type="text" class="txtbox"required><br><br>
+                <button name="submit" type="submit" class="sbtn">Submit</button>              
+            </form>
+        </div>
+    </div>
+    </body>
+</html>

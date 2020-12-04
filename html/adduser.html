@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BugMe Issue Tracker</title>
+        <meta charset= "utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link rel="stylesheet" href="../styles/adduser.css">
+         <link rel="stylesheet" href="../styles/all.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <img class="logo" src="../images/bugicon3.png" alt="bug icon">   
+                <h2>BugMe Issue Tracker</h2>
+            </header>
+        <div class="sidebox">
+            <div class="sidebar">
+                <ul>
+                    <li><a href="home.html"><i class="fas fa-home"></i>Home</a></li>
+                    <li><a href="adduser.html"><i class="fas fa-user-plus"></i>Add User</a></li>
+                    <li><a href="newissue.html"><i class="fas fa-plus-circle"></i>New Issue</a></li>
+                    <li><a href="logout.html"><i class="fas fa-power-off"></i>Logout</a></li>
+                </ul>
+        </div>
+        </div>
+        <div class="infocon">
+            <h1>New User</h1>
+            <form method="post" action="" id="signup" class="text-field">
+                <label for="fname">Firstname</label><br>
+                <input name="firstname" type="text" class="txtbox"required><br><br>
+                <label for="lname">Lastname</label><br>
+                <input name="lastname" type="text" class="txtbox" required><br><br>
+                <label for="password">Password</label><br>
+                <input name="password" type="password" class="txtbox"required><br><br>
+                <label for="email">Email</label><br>
+                <input name="email" type="email" class="txtbox"required><br><br>
+                <button name="submit" type="submit" class="sbtn">Submit</button>              
+            </form>
+        </div>
+    </div>
+    </body>
+</html>
