@@ -6,8 +6,6 @@ if(isset($_POST['action'])){
         case '':
         break;
 
-        
-
         case 'logout':
             session_unset();
             session_destroy();
@@ -32,6 +30,10 @@ if(isset($_POST['action'])){
         
         case 'cissueinputs':
             include './function/cissueinput.php';
+            break;
+        
+        case 'viewmain':
+            include './function/viewmain.php';
             break;
 
         default:

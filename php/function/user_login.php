@@ -36,6 +36,7 @@ if(filter_var($email, FILTER_VALIDATE_EMAIL)){
                 if(password_verify($password, $results[0]['password'])){
                     $_SESSION['email'] = $email;
                     $_SESSION['logged-in'] = true;
+                    $_SESSION['userid'] = $results[0]['id'];
                     echo "SL";
                 }else{
                     echo "User Login Error: Password Entered Do Not Match";
