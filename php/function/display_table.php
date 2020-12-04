@@ -72,7 +72,7 @@ $conn = null;
                     ?>
                     <td><?= $id." "."<a class='{$className}' href=''>{$result['title']}<a>"?></td>
                     <td><?= $result['type'] ?></td>
-                    <td><?= $result['status'] ?></td>
+                    <td><?= strtoupper($result['status']) ?></td>
                     <td><?= $result['firstname']." ".$result['lastname'] ?></td>
                     <td><?= $result['created']?></td>
                 </tr>

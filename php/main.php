@@ -29,6 +29,10 @@ if(isset($_POST['action'])){
         case 'createissue':
             include './function/create_issue.php';
             break;
+        
+        case 'cissueinputs':
+            include './function/cissueinput.php';
+            break;
 
         default:
             echo "<h1>Failed to Load Page</h1>";

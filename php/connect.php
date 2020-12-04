@@ -6,7 +6,7 @@ try{
     //Establish PDO Connection to the Database
     $host = 'localhost';
     $username = 'testuser';
-    $password = 'password@123';
+    $password = 'pAssw0rd@123';
     $dbname = 'BugIssue';
     $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
 }catch(Exception $e){

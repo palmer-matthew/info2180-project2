@@ -11,6 +11,11 @@ if(isset($_SESSION['logged-in'])){
         $password = filter_var($_POST['pswd'], FILTER_SANITIZE_STRING);
         $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
 
+        $firstname = strtolower($firstname);
+        $firstname = ucfirst($firstname);
+        $lastname = strtolower($lastname);
+        $lastname = ucfirst($lastname);
+
         $regex_string = "/^[a-zA-Z]+$/";
         $regex_password = "/^(?=.+[0-9])(?=.+[a-z])(?=.+[A-Z])([a-zA-Z0-9]+)$/";
 
