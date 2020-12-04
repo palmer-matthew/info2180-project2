@@ -27,7 +27,7 @@ if(isset($_SESSION['logged-in'])){
             }catch(Error $e){
                 echo "Table Display Error: ".$e->msgfmt_format_message;
             }
-        }else if($type == "A"){
+        }else if($type == "M"){
             try{
                 $userid = $_SESSION['userid'];
                 $query = "SELECT Issue.id, Issue.title, Issue.type, Issue.status, Issue.assigned_to, Issue.created, Users.firstname, Users.lastname FROM Issue LEFT JOIN Users ON Issue.assigned_to = Users.id WHERE Issue.assigned_to = {$userid}";
@@ -67,7 +67,7 @@ $conn = null;
             <? foreach($results as $result):?>
                 <tr>
                     <?php
-                        $id = strval($result['id']);
+                        $id = "#".strval($result['id']);
                         $className = "A".$id;
                     ?>
                     <td><?= $id." "."<a class='{$className}' href=''>{$result['title']}<a>"?></td>
