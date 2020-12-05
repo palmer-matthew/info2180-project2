@@ -7,9 +7,9 @@ session_start();
     <head>
     </head>    
        <body>
-           <?php include("../pages/header.html");?>
+           <?php include("../pages/header.php");?>
            <div class="container">
-               <?php include("../pages/sidebar.html");?>
+               <?php include("../pages/sidebar.php");?>
                 <div class="main">
                 </div>
             </div>

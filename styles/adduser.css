@@ -38,7 +38,7 @@ header h2{
 .sidebox {
     display: flex;
     background:rgb(236, 232, 232);
-    padding: 10px 10px;
+    padding-top: 10px;
     height:600px;
 }
 
@@ -84,12 +84,6 @@ header h2{
     margin-top: 3%;
     margin-bottom: 10px;
 }
-.home h1{
-    font-size: 40px;
-    margin-left: 3.4%;
-    margin-top: 3%;
-    margin-bottom: 10px;
-}
 
 .infocon input{
     background-color:rgb(240, 240, 240);
@@ -121,21 +115,27 @@ form button {
     height:29px;
     color: white;
 }
-h1 button {
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3.5%;
+}
+
+.flex button {
     background-color:rgb(2, 189, 95);
     border:none;
     border-radius:3px;
-    width:120px;
-    height:29px;
+    padding: 1.25% 2.5%;
     color: white;
-    margin-left: 750px;
+    font-size: 18px;
 }
 
 /*TAB*/
 .tab {
-    display: block;
-    overflow: hidden;
-    margin-left:40px;
+    display: flex;
+    margin-left: 3.75%; 
 }
 
 .tab h3{
@@ -153,10 +153,12 @@ h1 button {
     border-radius: 3px; 
     padding: 10px; 
 }
+
 .tab button:hover{
     background-color:rgb(91, 78, 204);
     color: white;
 }
+
 .login form{
     text-align: center;
 }
@@ -177,33 +179,3 @@ h1 button {
 .login .textbox{
     text-align: left;
 }
-
-/*Navigation Bar*/
-/*.navbar{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 100vh;
-}
-.navbar ul{
-    list-style-type: none;
-    margin:0;
-    padding:0;
-    overflow: hidden;
-    background-color: rgb(224, 218, 218);
-    border-radius:5px;
-    height: 40px;
-    margin-left: auto;
-    
-}
-.navbar li{
-    display: inline-block;
-    
-    
-}
-.navbar li a{
-    display:block;
-    color:black;
-    text-align: center;
-    padding:10px 16px;
-    text-decoration: none;
-}*/

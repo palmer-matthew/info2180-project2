@@ -16,7 +16,11 @@ session_start();
         <div class="container">
             <?php include("../pages/sidebar.php");?>
             <div class="home">
-                <h1>Issues <button name="create" type="create" class="createbtn">Create New Issue</button></h1>
+                <div class="flex">
+                    <h1>Issues</h1>
+                    <button name="create" type="create" class="createbtn">Create New Issue</button>
+                </div>
+                
                 <!--  TAB -->
                 <div class="tab">
                     <h3>Filter by:</h3> 
