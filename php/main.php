@@ -4,9 +4,8 @@ session_start();
 if(isset($_POST['action'])){
     switch($_POST['action']){
         case '':
+            echo "Nothing happened";
         break;
-
-        
 
         case 'logout':
             session_unset();
@@ -32,6 +31,10 @@ if(isset($_POST['action'])){
         
         case 'cissueinputs':
             include './function/cissueinput.php';
+            break;
+        
+        case 'viewmain':
+            include './function/viewmain.php';
             break;
 
         default:
