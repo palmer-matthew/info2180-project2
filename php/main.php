@@ -24,7 +24,7 @@ if(isset($_POST['action'])){
         
         case 'tdisplay':
             include './function/display_table.php';
-            break;
+            break; 
         
         case 'createissue':
             include './function/create_issue.php';
