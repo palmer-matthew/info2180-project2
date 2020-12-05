@@ -19,3 +19,18 @@ git remote add upstream https://github.com/palmer-matthew/info2180-project2.git
 
 It would be a good idea to keep a local stable branch of the project code on your local repository. This would minimize the risk of any clashes in versions while coding even if we are working on separate aspects of the project.
 
+
+To update your local main branch after the central project repository main has been updated , you enter:
+
+
+```
+git pull upstream main
+```
+
+It also would be a good idea to merge the new main changes with your forked repository changes, you can enter the following line if your origin is the forked repository:
+
+
+```
+git push origin main
+```
+
