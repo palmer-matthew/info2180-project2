@@ -4,23 +4,13 @@
         <title>BugMe Issue Tracker</title>
         <meta charset= "utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-         <link rel="stylesheet" href="../styles/adduser.css">
-         <link rel="stylesheet" href="../styles/all.min.css">
+        <link rel="stylesheet" href="../styles/adduser.css">
+        <link rel="stylesheet" href="../styles/all.min.css">
     </head>
     <body>
-        <header>
-            <img class="logo" src="../images/bugicon3.png" alt="bug icon">   
-            <h2>BugMe Issue Tracker</h2>
-        </header>
+        <?php include("../pages/header.php");?>
         <div class="container">
-            <div class="sidebox">
-                <ul>
-                    <li><a href="home.html"><i class="fas fa-home"></i>Home</a></li>
-                    <li><a href="adduser.html"><i class="fas fa-user-plus"></i>Add User</a></li>
-                    <li><a href="newissue.html"><i class="fas fa-plus-circle"></i>New Issue</a></li>
-                    <li><a href="login.html"><i class="fas fa-power-off"></i>Logout</a></li>
-                </ul>
-            </div>
+            <?php include("../pages/sidebar.php");?>
             <div class="infocon">
                 <h1>New User</h1>
                 <form method="post" action="" id="signup" class="text-field">
