@@ -26,7 +26,7 @@ window.onload = () => {
             }).then(response => {
                 return response.text();
             }).then(data => {
-                alert("You have closed this issue")
+            
             })
         })
 
@@ -42,7 +42,6 @@ window.onload = () => {
             }).then(response => {
                 return response.text();
             }).then(data => {
-                alert("You have set this issue - In Progress")
 
             })
         })

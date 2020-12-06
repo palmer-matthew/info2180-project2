@@ -68,8 +68,8 @@ if(isset($_SESSION['logged-in'])){
                             <p class='heading'>Status<p>
                             <p>{$status}</p>
                         </div>
-                        <button class='close' value='closed'>Mark As Closed</button>
-                        <button class='inprog'value='inprogress'>Mark As In Progress</button>
+                        <button class='close'>Mark As Closed</button>
+                        <button class='inprog'>Mark As In Progress</button>
                     </div>
                 </div>
             </section>

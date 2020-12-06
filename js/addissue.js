@@ -16,6 +16,8 @@ window.onload = () => {
     }).then(data => {
         let selection = document.getElementById("assignto")
         selection.innerHTML = data.trim();
+    }).catch (error => {
+        console.log(error);
     })
     
     document.querySelector(".sbtn").addEventListener('click', function(event) {
@@ -31,19 +33,19 @@ window.onload = () => {
         let $assign = document.getElementById("assignto").value;
 
         //Validation
-        if($titlev.match(/^[A-Z][- a-zA-Z]+$/) == null || $titlev == null){
+        if($titlev.match(/^[a-zA-Z0-9\s]*$/) == null || $titlev == null){
             document.getElementById("msg_b").innerHTML = "Oops, something's wrong (Check Title) - Please Try Again"
         }else{
             title = true;
         }
 
-        if($desc.match(/\b((?!=|\,|\.).)+(.)\b/) == null || $desc == null){
+        if($desc.match(/^[a-zA-Z0-9\s]*$/) == null || $desc == null){
             document.getElementById("msg_b").innerHTML = "Oops, something's wrong (Check Description) - Please Try Again"
         }else{
             description = true;
         }
 
-        if($titlev.match(/^[A-Z][- a-zA-Z]+$/) == null && $desc.match(/\b((?!=|\,|\.).)+(.)\b/) == null){
+        if($titlev.match(/^[a-zA-Z0-9\s]*$/) == null && $desc.match(/^[a-zA-Z0-9\s]*$/) == null){
             document.getElementById("msg_b").innerHTML = "Please Fill in Title/Description";
         }
 
@@ -63,7 +65,9 @@ window.onload = () => {
             }).then(response => {
                 return response.text();
             }).then(data => {
-                alert("New Issue Recorded")
+                
+            }).catch (error => {
+                console.log(error);
             })
         }
     })
@@ -85,6 +89,8 @@ window.onload = () => {
             if(data.trim() == "LOG-OUT"){
                 window.location.href = "../index.php";
             }
+        }).catch (error => {
+            console.log(error);
         })
     });
 }
