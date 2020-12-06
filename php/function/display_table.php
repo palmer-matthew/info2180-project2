@@ -50,11 +50,11 @@ if(isset($_SESSION['logged-in'])){
         if($found == true){
             $head = "
             <table>
-                <thead>
+                <thead id='table-header'>
                     <tr>
                         <th>Title</th>
                         <th>Type</th>
-                        <th>Status</th>
+                        <th id='issue-status'> Status </th>
                         <th>Assigned to</th>
                         <th>Created</th>
                     </tr>
