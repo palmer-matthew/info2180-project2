@@ -18,6 +18,7 @@ session_start();
             <?php include("../pages/sidebar.php");?>
             <div class="infocon">
                 <h1>Create Issue</h1>
+                <div id="msg_b" class="message"></div>
                 <form method="post" action="" id="newissue" class="text-field">
                     <label for="title">Title</label><br>
                     <input name="title" type="text" id="title" required><br><br>
