@@ -84,6 +84,8 @@ if(isset($_SESSION['logged-in'])){
             }
             $head .= $end;
             echo $head;
+        }else{
+            echo "No Issues to Show";
         }
         
     }else{

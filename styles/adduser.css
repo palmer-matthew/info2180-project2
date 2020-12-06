@@ -154,10 +154,11 @@ form button {
     padding: 10px; 
 }
 
-.tab button:hover{
+.tab button:hover, .tab button.active {
     background-color:rgb(91, 78, 204);
     color: white;
 }
+
 
 .login form{
     text-align: center;
@@ -167,15 +168,34 @@ form button {
     padding-top:50px;
     font-size:50px;
 }
+
+#msgg{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 .login input{
     background-color:rgb(255, 255, 255);
     border-radius: 3px;
     border:0.5px solid rgb(236, 233, 233);
-    box-shadow: 5px 4px rgb(240, 240, 240);
+    box-shadow: 1px 2px rgb(240, 240, 240);
     height: 29px;
     width: 20%;
     margin-top: 10px;
 }
+
 .login .textbox{
     text-align: left;
 }
+
+.table{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+    color: #ccc;
+}
+
+/* Styling for the Table  */
+
+/* Styling for the Issue Details*/

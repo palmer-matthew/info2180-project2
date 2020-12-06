@@ -42,7 +42,6 @@ window.onload = () => {
                 }).then(response => {
                     return response.text();
                 }).then(data => {
-                    alert(data);
                     if(data == "SL"){
                         window.location.href = "./home.php";
                     }else{
