@@ -23,7 +23,7 @@ if(isset($_POST['action'])){
         
         case 'tdisplay':
             include './function/display_table.php';
-            break;
+            break; 
         
         case 'createissue':
             include './function/create_issue.php';
@@ -43,7 +43,7 @@ if(isset($_POST['action'])){
     }
     exit();
 }else{
-    echo "<h1>Failed to Load Page</h1>";
+    echo "<h1>Failed to Load Page: Action is not set</h1>";
 }
 
 ?>
