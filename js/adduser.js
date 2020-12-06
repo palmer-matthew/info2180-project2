@@ -74,6 +74,8 @@ window.onload = () => {
                 }else{
                     document.getElementById("msg_a").innerHTML = data.trim()
                 }
+            }).catch (error => {
+                console.log(error);
             })
         }
     })
@@ -94,6 +96,8 @@ window.onload = () => {
             if(data.trim() == "LOG-OUT"){
                 window.location.href = "../index.php";
             }
+        }).catch (error => {
+            console.log(error);
         })
     });
 }

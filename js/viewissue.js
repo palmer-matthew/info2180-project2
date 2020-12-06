@@ -13,6 +13,38 @@ window.onload = () => {
     }).then(data => {
         let main = document.querySelector(".main");
         main.innerHTML = data.trim();
+
+        document.querySelector(".close").addEventListener('click', function(event){
+
+            var searchParams = new URLSearchParams();
+            searchParams.append('action','updateissue');
+            searchParams.append('status','closed');
+
+            fetch("../php/main.php", {
+                method: 'POST' ,
+                body: searchParams,
+            }).then(response => {
+                return response.text();
+            }).then(data => {
+            
+            })
+        })
+
+        document.querySelector(".inprog").addEventListener('click', function(event){
+
+            var searchParams = new URLSearchParams();
+            searchParams.append('action','updateissue');
+            searchParams.append('status','inprogress');
+
+            fetch("../php/main.php", {
+                method: 'POST' ,
+                body: searchParams,
+            }).then(response => {
+                return response.text();
+            }).then(data => {
+
+            })
+        })
     })
 
 
