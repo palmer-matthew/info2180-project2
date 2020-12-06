@@ -46,6 +46,14 @@ window.onload = () => {
             document.getElementById("msg_a").innerHTML= "Oops, something's wrong - Please Try Again";
         }
 
+        if($fname == true && $lname == false){
+            document.getElementById("msg_a").innerHTML= "Oops, something's wrong (Check Last Name) - Please Try Again";
+        }
+
+        if($fname == false && $lname == true){
+            document.getElementById("msg_a").innerHTML= "Oops, something's wrong (Check First Name) - Please Try Again";
+        }
+
         if($fname == true && $lname == true && $pass == true && $email == true){
             
             var searchParams = new URLSearchParams();
