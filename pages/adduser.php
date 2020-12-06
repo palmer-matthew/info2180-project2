@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../styles/adduser.css">
         <link rel="stylesheet" href="../styles/all.min.css">
+        <script src="../js/adduser.js"></script>
     </head>
     <body>
         <?php include("../pages/header.php");?>

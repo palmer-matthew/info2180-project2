@@ -36,14 +36,14 @@ window.onload = () => {
                 searchParams.append('email', emailv);
                 searchParams.append('pswd', passv);
 
-                fetch("../php/main.php" , {
+                fetch("./php/main.php" , {
                     method: 'POST',
                     body : searchParams,
                 }).then(response => {
                     return response.text();
                 }).then(data => {
                     if(data == "SL"){
-                        window.location.href = "./home.php";
+                        window.location.href = "./pages/home.php";
                     }else{
                         document.getElementById("msgg").innerHTML = data.trim();
                     }

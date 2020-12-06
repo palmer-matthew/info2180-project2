@@ -8,7 +8,7 @@ window.onload = () => {
         tabs = document.getElementsByClassName("links");
 
         for (i = 0; i < tabs.length; i++) {
-          tabs[i].className = tabs[i].className.replace(" active", "");
+            tabs[i].className = tabs[i].className.replace(" active", "");
         }
 
         e.currentTarget.className += " active";
