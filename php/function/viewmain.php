@@ -1,6 +1,6 @@
 <?php
 
-include '../connect.php';
+include './connect.php';
 
 //Display Table Dashboard Functionality :
 $found = false;
@@ -14,12 +14,12 @@ if(isset($_SESSION['logged-in'])){
             try{
                 $query = "SELECT Issue.*, Users.firstname, Users.lastname FROM Issue LEFT JOIN Users ON Issue.assigned_to = Users.id WHERE Issue.id = {$id}";
                 $stmt = $conn->query($query);
-                $results = $stmt->fetchALL(PDO::ASSOC);
+                $results = $stmt->fetchALL(PDO::FETCH_ASSOC);
                 if(sizeof($results) > 0){
                     $found = true;
                     $query = "SELECT Users.firstname, Users.lastname FROM Users WHERE Users.id = {$results[0]['created_by']}";
                     $stmt = $conn->query($query);
-                    $user = $stmt->fetchALL(PDO::ASSOC);
+                    $user = $stmt->fetchALL(PDO::FETCH_ASSOC);
                 }
             }catch(Error $e){
                 echo "View Main Error: ".$e->msgfmt_format_message;

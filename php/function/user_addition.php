@@ -1,6 +1,6 @@
 <?php
 
-include '../connect.php';
+include './connect.php';
 
 //User Addition Functionality :
 
@@ -27,7 +27,7 @@ if(isset($_SESSION['logged-in'])){
                     $conn->exec($query);
                     echo "SA";
                 }catch(Error $e){
-                    echo "User Addition Error: ".$e->msgfmt_format_message;
+                    echo "User Addition Error: ".$e;
                 }
             }
         }else{

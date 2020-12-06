@@ -25,9 +25,9 @@ session_start();
                 <!--  TAB -->
                 <div class="tab">
                     <h3>Filter by:</h3> 
-                    <button class="links" value="A">ALL</button>
-                    <button class="links" value="O">OPEN</button>
-                    <button class="links" value="M">MY TICKETS</button>
+                    <button id="a_" class="links" >ALL</button>
+                    <button id="o_" class="links" >OPEN</button>
+                    <button id="m_" class="links" >MY TICKETS</button>
                 </div>
                 <div class="table">
                 </div>

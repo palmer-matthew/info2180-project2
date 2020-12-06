@@ -11,9 +11,9 @@
     <body>
         <?php include("../pages/header.php");?>
         <div class="loginp">
-            <div id="msgg" class="message"> </div>
             <div class="login">
                 <h1>Login</h1>
+                <div id="msgg" class="message"></div>
                 <form method="post" action="" id="login" class="text-field">
                     <label for="email">Email</label><br>
                     <input id="email_input" name="email" type="email" class="txtbox"required><br><br>

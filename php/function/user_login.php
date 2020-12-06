@@ -1,6 +1,6 @@
 <?php 
 
-include '../connect.php';
+include './connect.php';
 
 //User Login Functionality 
 
@@ -8,19 +8,19 @@ $password = filter_var($_POST['pswd'], FILTER_SANITIZE_STRING);
 $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
 
 $regex_string = "/^[a-zA-Z]+$/";
-$regex_password = "/^(?=.+[0-9])(?=.+[a-z])(?=.+[A-Z])([a-zA-Z0-9]+)$/";
+$regex_password = "/^(?=.+[a-z])(?=.+[A-Z])(?=.+[0-9])([a-zA-Z0-9]+)$/";
 
 if(filter_var($email, FILTER_VALIDATE_EMAIL)){
-    if(sizeof($password) >= 8 && preg_match($regex_password, $password)){
+    if(strlen($password) >= 8 && preg_match($regex_password, $password)){
         $results = null;
         try{
             $query = "SELECT * FROM Users WHERE Users.email = '{$email}'";
             $stmt = $conn->query($query);
-            $results = $stmt->fetchALL(PDO::ASSOC);
+            $results = $stmt->fetchALL(PDO::FETCH_ASSOC);
         }catch(Error $e){
-            echo "User Login Error: ".$e->msgfmt_format_message;
+            echo "User Login Error: ".$e;
         }
-        if(sizeof($results) < 0){
+        if($results == null){
             echo "NO-MATCH";
         }else if(sizeof($results) == 1){
             if($results[0]['email'] == $email){ 

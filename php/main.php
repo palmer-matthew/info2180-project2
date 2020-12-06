@@ -43,7 +43,7 @@ if(isset($_POST['action'])){
     }
     exit();
 }else{
-    echo "<h1>Failed to Load Page</h1>";
+    echo "<h1>Failed to Load Page: Action is not set</h1>";
 }
 
 ?>

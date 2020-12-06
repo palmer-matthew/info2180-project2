@@ -1,6 +1,6 @@
 <?php
 
-include '../connect.php';
+include './connect.php';
 
 //Building the DropDown Field for Assigned To Value Functionality
 
@@ -12,7 +12,7 @@ if(isset($_SESSION['logged-in'])){
         try{
             $query = "SELECT * FROM Users WHERE Users.id <> {$id}";
             $stmt = $conn->query($query);
-            $results = $stmt->fetchALL(PDO::ASSOC);
+            $results = $stmt->fetchALL(PDO::FETCH_ASSOC);
         }catch(Error $e){
             echo "Table Display Error: ".$e->msgfmt_format_message;
         }

@@ -14,6 +14,7 @@ CREATE TABLE Users(
 );
 
 INSERT INTO Users(`firstname`, `lastname`, `password`, `email`) VALUES ('John', 'Doe', '$2y$10$BcWohldgqfoKGUsftid3YOonfOwqtnW..O.TZ9.3tru6lAsCQWUJC', 'admin@project2.com');
+INSERT INTO Users(`firstname`, `lastname`, `password`, `email`) VALUES ('Jaun-Luc', 'Brown', '$2y$10$NbZ2XCQvosg4bk7GI4R.fOlJGfxYalHcBOX0iyBoUS5MnAgjE.13y', 'jaunlucbrown15@gmail.com');
 
 DROP TABLE IF EXISTS Issue;
 CREATE TABLE Issue(
