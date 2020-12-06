@@ -8,7 +8,7 @@ $password = filter_var($_POST['pswd'], FILTER_SANITIZE_STRING);
 $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
 
 $regex_string = "/^[a-zA-Z]+$/";
-$regex_password = "/^(?=.+[a-z])(?=.+[A-Z])(?=.+[0-9])([a-zA-Z0-9]+)$/";
+$regex_password = "/^(?=.+[a-z])(?=.+[A-Z])(?=.+[0-9])$/";
 
 if(filter_var($email, FILTER_VALIDATE_EMAIL)){
     if(strlen($password) >= 8 && preg_match($regex_password, $password)){

@@ -69,11 +69,15 @@ if(isset($_SESSION['logged-in'])){
                 $id = "#".strval($result['id']);
                 $className = "A".$id;
                 $content = $id." "."<a class='{$className}' href=''>{$result['title']}<a>";
-                $part = strtoupper($result['status']);
                 $type = ucfirst($result['type']);
                 $name = $result['firstname']." ".$result['lastname'];
                 $date1 = date_create($result['created']);
                 $str1 = date_format($date1,"Y-m-d");
+                if($result['status'] == 'inprogress'){
+                    $part = strtoupper("In Progress");
+                }else{
+                    $part = strtoupper($result['status']);
+                }
                 $str = "
                 <tr>
                     <td>{$content}</td>

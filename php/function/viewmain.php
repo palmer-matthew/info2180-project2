@@ -39,9 +39,13 @@ if(isset($_SESSION['logged-in'])){
                 $name = $results[0]['firsname']." ".$results[0]['firsname'];
                 $type = ucfirst($results[0]['type']);
                 $prior = ucfirst($results[0]['priority']);
-                $status = ucfirst($results[0]['status']);
 
-
+                if($results[0]['status'] == 'inprogress'){
+                    $status = "In Progress";
+                }else{
+                    $status = ucfirst($results[0]['status']);
+                }
+                
                 $head = "
                 <section>
                     <h1>{$results[0]['title']}</h1>
