@@ -5,8 +5,8 @@ include './connect.php';
 $found = false;
 
 if(isset($_SESSION['logged-in'])){
-    if($_SESSION['logged-in'] == true){
-        $issue = filter_var($_POST['id'], FILTER_SANITIZE_NUMBER_INT);
+    if($_SESSION['logged-in'] == true && isset($_SESSION['cache'])){
+        $issue = $_SESSION['cache'];
         $status = strtolower(filter_var($_POST['status'], FILTER_SANITIZE_STRING));
         try{
             $query = "UPDATE Issue SET status = '{$status}', updated = CURRENT_TIMESTAMP WHERE Issue.id = {$issue}";
