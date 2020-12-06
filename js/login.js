@@ -43,7 +43,7 @@ window.onload = () => {
                     return response.text();
                 }).then(data => {
                     if(data == "SL"){
-                        window.location.href = "./home.php";
+                        window.location.href = "./pages/home.php";
                     }else{
                         document.getElementById("msgg").innerHTML = data.trim();
                     }
