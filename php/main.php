@@ -37,6 +37,10 @@ if(isset($_POST['action'])){
             include './function/viewmain.php';
             break;
 
+        case 'updateissue':
+            include './function/updateissue.php';
+            break;
+
         default:
             echo "<h1>Failed to Load Page</h1>";
             break;
