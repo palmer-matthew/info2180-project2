@@ -70,14 +70,15 @@ if(isset($_SESSION['logged-in'])){
                 $className = "A".$id;
                 $content = $id." "."<a class='{$className}' href=''>{$result['title']}<a>";
                 $part = strtoupper($result['status']);
+                $type = ucfirst($result['type']);
                 $name = $result['firstname']." ".$result['lastname'];
                 $date1 = date_create($result['created']);
-                $str1 = date_format("Y-m-d",$date1);
+                $str1 = date_format($date1,"Y-m-d");
                 $str = "
                 <tr>
                     <td>{$content}</td>
-                    <td>{$result['type']}</td>
-                    <td>{$part}</td>
+                    <td>{$type}</td>
+                    <td class='center'><span class='{$result['status']}'>{$part}</span></td>
                     <td>{$name}</td>
                     <td>{$str1}</td>
                 </tr>
@@ -87,7 +88,7 @@ if(isset($_SESSION['logged-in'])){
             $head .= $end;
             echo $head;
         }else{
-            echo "No Issues to Show";
+            echo "<h3>No Issues to Show</h3>";
         }
         
     }else{

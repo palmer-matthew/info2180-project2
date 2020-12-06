@@ -36,7 +36,7 @@ window.onload = () => {
                 searchParams.append('email', emailv);
                 searchParams.append('pswd', passv);
 
-                fetch("../php/main.php" , {
+                fetch("./php/main.php" , {
                     method: 'POST',
                     body : searchParams,
                 }).then(response => {

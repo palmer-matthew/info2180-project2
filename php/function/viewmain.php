@@ -29,12 +29,12 @@ if(isset($_SESSION['logged-in'])){
                 //Building Information 
                 $str = "Issue created on ";
                 $date = date_create($results[0]['created']);
-                $str .= date_format("F j, Y at g:i",$date);
+                $str .= date_format($date,"F j, Y at g:i");
                 $str .= " by ".$user[0]['firstname']." ".$user[0]['lastname'];
 
                 $str1 = "Last updated on ";
                 $date1 = date_create($results[0]['updated']);
-                $str1 .= date_format("F j, Y at g:i",$date1);
+                $str1 .= date_format($date1,"F j, Y at g:i");
 
                 $name = $results[0]['firsname']." ".$results[0]['firsname'];
                 $type = ucfirst($results[0]['type']);
