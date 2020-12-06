@@ -1,3 +1,6 @@
+*{
+    text-decoration: none;
+}
 body {
     margin:0 auto;
     font-size:18px;
@@ -193,6 +196,26 @@ form button {
     justify-content: center;
     align-items: center;
 }
+table{
+    margin-top: 50px;
+    border-collapse: collapse;
+    width: 95%;
+}
+th,td {
+	padding: 10px 0;
+}
+th{
+    text-align: left;
+}
+.table a{
+    color: #029ae6;
+ }
+td {
+	border-bottom: 1px solid #ddd;
+}
+#issue-status {
+	text-align: center;
+}
 
 .table h2{
     color: #ccc;
@@ -209,6 +232,76 @@ form button {
     text-align: center;
     padding: 2px 8px;
 }
+.table .in.Progress{
+    background-color:#fcba03;   
+    border-radius: 5px;
+    text-align: center;
+    padding: 2px 8px; 
+}
+.table .closed{
+    background-color: #fc4a03;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    padding: 2px 8px; 
+}
+#table-header {
+	padding: 10px 0;
+    background-color: #f2f2f2;
+}
+.square{
+    padding:2px 2px;
+    margin-left:100px;
+    background-color: #ecf0f1;
+    border-radius: 2%;
+    text-align: left;
+    align-items: right;
+    width:170px;
+    height:200px;
+    font-size:12px;
+    text-indent: 10px;
+    border-color: rgb(165, 155, 155);
+    border-style: solid;
+    border-width: 1px;
+    
+}
+.heading{
+    font-weight:bold;
+    margin:0;
+}
+.layout{
+    display:grid;
+    grid-template-columns: 0.75fr 0.25fr;
+}
+section{
+    text-indent: 20px;
+    display:inline-block;
+}
+.close{
+    background-color: rgb(80, 80, 255);
+    color:white;
+    font-weight:bold;
+    border-radius:2px;
+    border:none;
+    width:175px;
+    height:30px;
+    margin-top:30px;
+    margin-left:100px;
+}
+.inprog{
+    background-color: rgb(9, 170, 95);
+    color:white;
+    font-weight:bold;
+    border-radius:2px;
+    border:none;
+    width:175px;
+    height:30px;
+    margin-top:20px;
+    margin-left:100px;
+}
+
+   
+
 /* Styling for the Table  */
 
 /* Styling for the Issue Details*/
