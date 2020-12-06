@@ -83,7 +83,7 @@ window.onload = () => {
         var searchParams = new URLSearchParams();
         searchParams.append('action','logout');
 
-        fetch("./php/main.php", {
+        fetch("../php/main.php", {
             method: 'POST' ,
             body: searchParams,
         }).then(response => {
