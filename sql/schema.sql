@@ -13,9 +13,7 @@ CREATE TABLE Users(
     PRIMARY KEY  (`id`)
 );
 
-INSERT INTO Users(`firstname`, `lastname`, `password`, `email`) VALUES ('Admin', 'Person', '$2y$10$BcWohldgqfoKGUsftid3YOonfOwqtnW..O.TZ9.3tru6lAsCQWUJC', 'admin@project2.com'),
-('Jaun-Luc', 'Brown', '$2y$10$NbZ2XCQvosg4bk7GI4R.fOlJGfxYalHcBOX0iyBoUS5MnAgjE.13y', 'jaunlucbrown15@gmail.com'),
-('Ashley', 'Perkins', '$2y$10$3JVkKfiB49TgRs543NgwTeVI.U4HKFBveH6Rx73E0E3eWBoVDngLy', 'ashperkins@gmail.com');
+INSERT INTO Users(`firstname`, `lastname`, `password`, `email`) VALUES ('Admin', 'Person', '$2y$10$BcWohldgqfoKGUsftid3YOonfOwqtnW..O.TZ9.3tru6lAsCQWUJC', 'admin@project2.com');
 
 DROP TABLE IF EXISTS Issue;
 CREATE TABLE Issue(
