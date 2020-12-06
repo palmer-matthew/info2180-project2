@@ -31,13 +31,13 @@ window.onload = () => {
         }
 
         if ($emailv.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/) == null ||  $emailv == null){
-            document.getElementById("msg_a").innerHTML = "Please Enter a Valid Email !";
+            document.getElementById("msg_a").innerHTML = "Please Enter a Valid Email/Password!";
         }else{
             $email = true;
         }
 
         if ($passv.match(/^(?=.+[a-z])(?=.+[A-Z])(?=.+[0-9])$/) == null || $passv == null){
-            document.getElementById("msg_a").innerHTML ="Please Enter a Valid Password!"
+            document.getElementById("msg_a").innerHTML ="Please Enter a Valid Email/Password!"
         }else{
             $pass = true;
         }
