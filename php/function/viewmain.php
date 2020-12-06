@@ -45,7 +45,7 @@ if(isset($_SESSION['logged-in'])){
                 $head = "
                 <section>
                     <h1>{$results[0]['title']}</h1>
-                    <h3>#{$results[0]['id']}</h3>
+                    <h3>Issue #{$results[0]['id']}</h3>
                     <div class='layout'>
                         <div class='col1'>
                             <p>{$results[0]['description']}</p>

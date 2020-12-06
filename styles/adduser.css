@@ -232,12 +232,15 @@ td {
     text-align: center;
     padding: 2px 8px;
 }
-.table .in.Progress{
+
+.table .inprogress{
     background-color:#fcba03;   
     border-radius: 5px;
     text-align: center;
     padding: 2px 8px; 
+    color: white;
 }
+
 .table .closed{
     background-color: #fc4a03;
     color: white;
@@ -245,18 +248,19 @@ td {
     text-align: center;
     padding: 2px 8px; 
 }
+
 #table-header {
 	padding: 10px 0;
     background-color: #f2f2f2;
 }
+
 .square{
-    padding:2px 2px;
-    margin-left:100px;
+    padding: 10% 2px;
     background-color: #ecf0f1;
     border-radius: 2%;
     text-align: left;
     align-items: right;
-    width:170px;
+    width: 75%;
     height:200px;
     font-size:12px;
     text-indent: 10px;
@@ -265,43 +269,59 @@ td {
     border-width: 1px;
     
 }
+
 .heading{
     font-weight:bold;
     margin:0;
 }
+
 .layout{
     display:grid;
-    grid-template-columns: 0.75fr 0.25fr;
+    grid-template-columns: 1.5fr .5fr;   
 }
+
 section{
+    width: 100%;
     text-indent: 20px;
     display:inline-block;
 }
+
 .close{
     background-color: rgb(80, 80, 255);
     color:white;
     font-weight:bold;
     border-radius:2px;
     border:none;
-    width:175px;
-    height:30px;
+    width: 75%;
+    height: 12%;
     margin-top:30px;
-    margin-left:100px;
 }
+
 .inprog{
     background-color: rgb(9, 170, 95);
     color:white;
     font-weight:bold;
     border-radius:2px;
     border:none;
-    width:175px;
-    height:30px;
+    width: 75%;
+    height: 12%;
     margin-top:20px;
-    margin-left:100px;
 }
 
-   
+.col1{
+    text-indent: 0;
+    padding: 0 3%;
+}
 
-/* Styling for the Table  */
+.col1 ul{
+    padding-inline-start: 3%;
+}
 
-/* Styling for the Issue Details*/
+.col1 li{
+    color: #ccc;
+}
+
+.col2{
+    text-indent: 0;
+    padding-left: 3%;
+}
