@@ -1,36 +1,9 @@
 # INFO2180 Project 2
 
-This is a short guide for contributing to the repository:
+## Group Members and ID Numbers:
 
-- The main branch of the repository will be used to house the most stable code of the project. So no one should push to the main branch until it has been fully tested.
-- You can fork the repository, clone the forked reposiroty to your computer before  making changes to that version of the repository. When you're sure of the update then you can push to this repository.
+- Ashley Perkins - 620129607
+- Jaun-Luc Brown - 620130186
+- Matthew Palmer - 620131688
 
-Check if this repository is listed as the upstream to your forked repository using:
-
-```
-git remote -v
-```
-
-If it is not listed then you can set it using:
-
-```
-git remote add upstream https://github.com/palmer-matthew/info2180-project2.git
-```
-
-It would be a good idea to keep a local stable branch of the project code on your local repository. This would minimize the risk of any clashes in versions while coding even if we are working on separate aspects of the project.
-
-
-To update your local main branch after the central project repository main has been updated , you enter:
-
-
-```
-git pull upstream main
-```
-
-It also would be a good idea to merge the new main changes with your forked repository changes, you can enter the following line if your origin is the forked repository:
-
-
-```
-git push origin main
-```
-
+This is INFO2180 Project 2 for Group 20
