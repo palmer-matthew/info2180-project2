@@ -22,7 +22,58 @@ if(isset($_SESSION['logged-in'])){
                     $user = $stmt->fetchALL(PDO::FETCH_ASSOC);
                 }
             }catch(Error $e){
-                echo "View Main Error: ".$e->msgfmt_format_message;
+                echo "View Main Error: ".$e;
+            }
+
+            if($found == true){
+                //Building Information 
+                $str = "Issue created on ";
+                $date = date_create($results[0]['created']);
+                $str .= date_format("F j, Y at g:i",$date);
+                $str .= " by ".$user[0]['firstname']." ".$user[0]['lastname'];
+
+                $str1 = "Last updated on ";
+                $date1 = date_create($results[0]['updated']);
+                $str1 .= date_format("F j, Y at g:i",$date1);
+
+                $name = $results[0]['firsname']." ".$results[0]['firsname'];
+                $type = ucfirst($results[0]['type']);
+                $prior = ucfirst($results[0]['priority']);
+                $status = ucfirst($results[0]['status']);
+
+
+                $head = "
+                <section>
+                    <h1>{$results[0]['title']}</h1>
+                    <h3>#{$results[0]['id']}</h3>
+                    <div class='layout'>
+                        <div class='col1'>
+                            <p>{$results[0]['description']}</p>
+                            <ul>
+                                <li>{$str}</li>
+                                <li>{$str}</li>
+                            </ul>
+                        </div>
+                        <div class='col2'>
+                            <div class='square'>
+                                <p class='heading'>Assigned To<p>
+                                <p>{$name}</p>
+                                <p class='heading'>Type<p>
+                                <p>{$type}</p>
+                                <p class='heading'>Priority<p>
+                                <p>{$prior}</p>
+                                <p class='heading'>Status<p>
+                                <p>{$status}</p>
+                            </div>
+                            <button class='close'>Mark As Closed</button>
+                            <button class='inprog'>Mark As In Progress</button>
+                        </div>
+                    </div>
+                </section>
+                ";
+                echo $head;
+            }else{
+                echo "View Page Error : Failed to Load Page";
             }
         }else{
             echo "View Main Error: Failed to receive Data";
@@ -38,45 +89,3 @@ $conn = null;
 
 ?>
 
-<? if($found == true):?>
-    <section>
-        <h1><?= $results[0]['title']?></h1>
-        <h3><?= "#".$results[0]['id']?></h3>
-        <div class="layout">
-            <div class="col1">
-                <p><?= $results[0]['description']?></p>
-                <ul>
-                    <li>
-                        <?php
-                            $str = "Issue created on ";
-                            $date = date_create($results[0]['created']);
-                            $str .= date_format("F j, Y at g:i",$date);
-                            $str .= " by ".$user[0]['firstname']." ".$user[0]['lastname'];
-                        ?>
-                    </li>
-                    <li>
-                        <?php
-                            $str = "Last updated on ";
-                            $date = date_create($results[0]['updated']);
-                            $str .= date_format("F j, Y at g:i",$date);
-                        ?>
-                    </li>
-                </ul>
-            </div>
-            <div class="col2">
-                <div class="square">
-                    <p class="heading">Assigned To<p>
-                    <p><?= $results[0]['firsname']." ".$results[0]['firsname'] ?></p>
-                    <p class="heading">Type<p>
-                    <p><?= ucfirst($results[0]['type'])?></p>
-                    <p class="heading">Priority<p>
-                    <p><?= ucfirst($results[0]['priority'])?></p>
-                    <p class="heading">Status<p>
-                    <p><?= ucfirst($results[0]['status'])?></p>
-                </div>
-                <button class="close">Mark As Closed</button>
-                <button class="inprog">Mark As In Progress</button>
-            </div>
-        </div>
-    </section>
-<? endif;?>

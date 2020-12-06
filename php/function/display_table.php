@@ -71,13 +71,15 @@ if(isset($_SESSION['logged-in'])){
                 $content = $id." "."<a class='{$className}' href=''>{$result['title']}<a>";
                 $part = strtoupper($result['status']);
                 $name = $result['firstname']." ".$result['lastname'];
+                $date1 = date_create($result['created']);
+                $str1 = date_format("Y-m-d",$date1);
                 $str = "
                 <tr>
                     <td>{$content}</td>
                     <td>{$result['type']}</td>
                     <td>{$part}</td>
                     <td>{$name}</td>
-                    <td>{$result['created']}</td>
+                    <td>{$str1}</td>
                 </tr>
                 ";
                 $head .= $str;
