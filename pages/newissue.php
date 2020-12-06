@@ -10,8 +10,9 @@ session_start();
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../styles/adduser.css">
         <link rel="stylesheet" href="../styles/all.min.css">
+        <script src="../js/addissue.js"></script>
     </head>    
-       <body>
+    <body>
         <?php include("../pages/header.php");?>
         <div class="container">
             <?php include("../pages/sidebar.php");?>

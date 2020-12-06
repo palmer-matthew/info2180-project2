@@ -177,6 +177,11 @@ form button {
     margin-bottom: 20px;
 }
 
+#msg_a{
+    text-indent: 5%;
+    margin-bottom: 20px; 
+}
+
 .login input{
     background-color:rgb(255, 255, 255);
     border-radius: 3px;
@@ -286,6 +291,16 @@ section{
     display:inline-block;
 }
 
+section h1{
+    font-size: 50px;
+    margin-bottom: 10px;
+    margin-top: 3%;
+}
+
+section h3{
+    margin-top: 0;
+}
+
 .close{
     background-color: rgb(80, 80, 255);
     color:white;
@@ -313,12 +328,16 @@ section{
     padding: 0 3%;
 }
 
+.col1 p{
+    margin: 0;
+}
+
 .col1 ul{
     padding-inline-start: 3%;
 }
 
 .col1 li{
-    color: #ccc;
+    color: rgb(173, 171, 171);
 }
 
 .col2{

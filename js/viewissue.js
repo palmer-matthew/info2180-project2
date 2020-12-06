@@ -1,35 +1,31 @@
 //https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
 
-window.onload = () => {
-
-
-    //Async Call for Assigned to drop down
+window.onload = () => {   
     
-    var searchParams1 = new URLSearchParams();
-    searchParams1.append('action','cissueinputs');
+    var searchParams = new URLSearchParams();
+    searchParams.append('action','viewmain');
 
     fetch("../php/main.php", {
         method: 'POST' ,
-        body: searchParams1,
+        body: searchParams,
     }).then(response => {
         return response.text();
     }).then(data => {
-        let selection = document.getElementById("assignto")
-        selection.innerHTML = data.trim();
+        let main = document.querySelector(".main");
+        main.innerHTML = data.trim();
     })
-
 
 
     //The event listener for the LOGOUT List Item
     document.querySelector(".last").addEventListener('click', function(event){
         event.preventDefault();
 
-        var searchParams = new URLSearchParams();
-        searchParams.append('action','logout');
+        var searchParams1 = new URLSearchParams();
+        searchParams1.append('action','logout');
 
         fetch("../php/main.php", {
             method: 'POST' ,
-            body: searchParams,
+            body: searchParams1,
         }).then(response => {
             return response.text();
         }).then(data => {
@@ -38,4 +34,6 @@ window.onload = () => {
             }
         })
     });
+
+    
 }

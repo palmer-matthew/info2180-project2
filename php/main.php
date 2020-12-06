@@ -41,6 +41,15 @@ if(isset($_POST['action'])){
             include './function/updateissue.php';
             break;
 
+        case 'cache':
+            if(isset($_SESSION['logged-in'])){
+                if($_SESSION['logged-in'] == true){
+                    $_SESSION['cache'] = filter_var($_POST['id'], FILTER_SANITIZE_NUMBER_INT);
+                    echo "Cached Sucessfully";
+                }
+            }
+            break;
+
         default:
             echo "<h1>Failed to Load Page</h1>";
             break;

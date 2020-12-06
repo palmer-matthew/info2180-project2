@@ -8,7 +8,7 @@ window.onload = () => {
         tabs = document.getElementsByClassName("links");
 
         for (i = 0; i < tabs.length; i++) {
-          tabs[i].className = tabs[i].className.replace(" active", "");
+            tabs[i].className = tabs[i].className.replace(" active", "");
         }
 
         e.currentTarget.className += " active";
@@ -30,6 +30,33 @@ window.onload = () => {
         }).then(data => {
             let table = document.querySelector(".table");
             table.innerHTML = data.trim();
+
+            
+            let links = table.querySelectorAll("a");
+            links.forEach(element => {
+                element.addEventListener('click', (e)=>{
+
+                    var searchParams = new URLSearchParams();
+                    searchParams.append('action','cache');
+                    searchParams.append('id', element.attributes.value.nodeValue);
+
+                    fetch("../php/main.php", {
+                        method: 'POST' ,
+                        body: searchParams,
+                    }).then(response => {
+                        return response.text();
+                    }).then(data => {
+                        if(data.trim() == "Cached Sucessfully"){
+                            window.location.href ='../pages/issuedetails.php';
+                        }
+                    }).catch (error => {
+                        console.log(error);
+                    })
+                   
+                })
+            });
+        }).catch (error => {
+            console.log(error);
         })
     });
     
@@ -49,6 +76,32 @@ window.onload = () => {
         }).then(data => {
             let table = document.querySelector(".table");
             table.innerHTML = data.trim();
+
+            
+            let links = table.querySelectorAll("a");
+            links.forEach(element => {
+                element.addEventListener('click', (e)=>{
+
+                    var searchParams = new URLSearchParams();
+                    searchParams.append('action','cache');
+                    searchParams.append('id', element.attributes.value.nodeValue);
+
+                    fetch("../php/main.php", {
+                        method: 'POST' ,
+                        body: searchParams,
+                    }).then(response => {
+                        return response.text();
+                    }).then(data => {
+                        if(data.trim() == "Cached Sucessfully"){
+                            window.location.href ='../pages/issuedetails.php';
+                        }
+                    }).catch (error => {
+                        console.log(error);
+                    })
+                })
+            });
+        }).catch (error => {
+            console.log(error);
         })
     });
 
@@ -68,6 +121,33 @@ window.onload = () => {
         }).then(data => {
             let table = document.querySelector(".table");
             table.innerHTML = data.trim();
+
+            
+            let links = table.querySelectorAll("a");
+            links.forEach(element => {
+                element.addEventListener('click', (e)=>{
+
+                    var searchParams = new URLSearchParams();
+                    searchParams.append('action','cache');
+                    searchParams.append('id', element.attributes.value.nodeValue);
+
+                    fetch("../php/main.php", {
+                        method: 'POST' ,
+                        body: searchParams,
+                    }).then(response => {
+                        return response.text();
+                    }).then(data => {
+                        if(data.trim() == "Cached Sucessfully"){
+                            window.location.href ='../pages/issuedetails.php';
+                        }
+                    }).catch (error => {
+                        console.log(error);
+                    })
+                    window.location.href ='../pages/issuedetails.php';
+                })
+            });
+        }).catch (error => {
+            console.log(error);
         })
     });
 
@@ -92,6 +172,8 @@ window.onload = () => {
             if(data.trim() == "LOG-OUT"){
                 window.location.href = "../index.php";
             }
+        }).catch (error => {
+            console.log(error);
         })
     });
 
