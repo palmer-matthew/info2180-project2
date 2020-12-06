@@ -18,26 +18,26 @@ window.onload = () => {
 
         //Individual input validation
 
-        if($fnamev.match(/^[A-Z][-a-zA-Z]+$/) == null || $fnamev == null){
+        if($fnamev.match(/^[a-zA-Z]+$/) == null || $fnamev == null){
             document.getElementById("msg_a").innerHTML = "First Name Invalid - Try Again (No spaces)"
         }else{
             $fname = true; 
         }
 
-        if($lnamev.match(/^[A-Z][a-zA-Z]+$/) == null || $lnamev == null){
+        if($lnamev.match(/^[a-zA-Z]+$/) == null || $lnamev == null){
             document.getElementById("msg_a").innerHTML = "Last Name Invalid - Try Again (No spaces)"
         }else{
             $lname = true; 
         }
 
         if ($emailv.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/) == null ||  $emailv == null){
-            document.getElementById("msg_a").innerHTML = "Please Enter a Valid Email/Password!";
+            document.getElementById("msg_a").innerHTML = "Please Enter a Valid Email!";
         }else{
             $email = true;
         }
 
-        if ($passv.match(/^(?=.+[a-z])(?=.+[A-Z])(?=.+[0-9])$/) == null || $passv == null){
-            document.getElementById("msg_a").innerHTML ="Please Enter a Valid Email/Password!"
+        if ($passv.match(/(?=.+[a-z])(?=.+[A-Z])(?=.+[0-9])/) == null || $passv == null || $passv.length < 8){
+            document.getElementById("msg_a").innerHTML ="Please Enter a Valid Password!"
         }else{
             $pass = true;
         }
@@ -63,14 +63,14 @@ window.onload = () => {
             searchParams.append('pswd', $passv);
             searchParams.append('email', $emailv);
 
-            fetch("./php/main.php", {
+            fetch("../php/main.php", {
                 method: 'POST' ,
                 body: searchParams,
             }).then(response => {
-                response.text();
+                return response.text();
             }).then(data => {
                 if(data == "SA"){
-                    window.location.href = "./pages/home.php";
+                    window.location.href = "./home.php";
                 }else{
                     document.getElementById("msg_a").innerHTML = data.trim()
                 }

@@ -68,7 +68,7 @@ if(isset($_SESSION['logged-in'])){
             foreach($results as $result){
                 $id = "#".strval($result['id']);
                 $className = "A".$id;
-                $content = $id." "."<a class='{$className}' href=''>{$result['title']}<a>";
+                $content = $id." "."<a value='{$result['id']}'>{$result['title']}</a>";
                 $type = ucfirst($result['type']);
                 $name = $result['firstname']." ".$result['lastname'];
                 $date1 = date_create($result['created']);
