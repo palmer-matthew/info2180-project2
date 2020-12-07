@@ -35,14 +35,16 @@ header h2{
 .container{
     display: grid;
     grid-template-columns: 1fr 5fr;
-    grid-template-rows: 30vh;
 }
  
+.home {
+    height: 100%;
+}
 .sidebox {
     display: flex;
     background:rgb(236, 232, 232);
     padding-top: 10px;
-    height:600px;
+    height: 100%;
 }
 
 .sidebox ul {
@@ -208,6 +210,7 @@ form button {
 }
 table{
     margin-top: 50px;
+    margin-bottom: 50px;
     border-collapse: collapse;
     width: 95%;
 }

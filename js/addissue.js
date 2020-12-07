@@ -65,7 +65,7 @@ window.onload = () => {
             }).then(response => {
                 return response.text();
             }).then(data => {
-                
+                window.location.href = "./home.php";
             }).catch (error => {
                 console.log(error);
             })

@@ -26,7 +26,7 @@ window.onload = () => {
             }).then(response => {
                 return response.text();
             }).then(data => {
-            
+                window.location.href = "./home.php";
             })
         })
 
@@ -42,7 +42,7 @@ window.onload = () => {
             }).then(response => {
                 return response.text();
             }).then(data => {
-
+                window.location.href = "./home.php";
             })
         })
     })
