@@ -29,9 +29,3 @@ CREATE TABLE Issue(
     `updated` DATETIME default CURRENT_TIMESTAMP,
     PRIMARY KEY  (`id`)
 );
-
-
-INSERT INTO Issue (`title`, `description`, `type`, `priority`, `status`, `assigned_to`, `created_by`) VALUES
-('No Colours','Table Colours not Showing','bug', 'minor', 'open', 2 , 3),
-('Aside Does Not Show', 'The Aside Setion does not appear in the page','bug', 'major', 'inprogress', 3 , 2),
-('Add User Profile', 'We should add a section that allows a user to see their profile','proposal', 'critical', 'closed', 3 , 2);
